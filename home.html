@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta name="description" content="">
+	  <meta name="author" content="">
+    <title>WebBee</title>
+
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+
+    <script type="text/javascript" src="bootstrap/js/jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $("#btn-abonnement").click(function(){
+          $("#abonnement").show('slow');
+        })
+        $(".close").click(function(){
+          $("#abonnement").hide();
+        })
+      })
+    </script>
+
+    <style media="screen">
+      body{
+        font-family: 'calibri light';
+      }
+      .dropdown-toggle{
+        background-color: transparent;
+        border: 0px;
+      }
+      input{
+        margin-bottom: 2%;
+      }
+      header{
+        position: fixed;
+        background-color: white;
+        z-index: 2;
+        width: 100%;
+      }
+      div{
+        background-size: 100% 100%;
+      }
+    </style>
+
+  </head>
+  <body class="">
+
+    <div class="visible-xs visible-sm" style="background-color:" id="debut">
+      <header> 
+        <div class="btn-group visible-xs visible-sm">
+          <button class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-list fa-2x"></span></button>
+
+          <ul class="dropdown-menu">
+            <li><a href="#html">Apprendre le HTML</a></li>
+            <li><a href="#css">Apprendre le CSS</a></li>
+            <li><a href="#perfection">Se perfectionner</a></li>
+            <li><a href="#webmaster">Devenir webmaster</a></li>
+            <li class="divider"></li>
+            <li><a href="#formulaire">Devenir membre de la communauté</a></li>
+            <li><a href="">Membres de la communauté</a></li>
+          </ul>
+          <span style="font-size: 30px;">WebBee</span>
+          <button class="btn pull-right" style="background-color: black; color: white; margin: 2%; border-radius: 10px 10px 10px 10px;" data-toggle="modal" id="btn-abonnement">S'abonner</button>
+        </div>
+      </header>
+    </div>
+
+    <div class="modal" id="abonnement">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">X</button>
+            <h3 class="modal-title">Abonnement</h3>
+          </div>
+          <div class="modal-body">
+            <p>
+              Merci de visiter notre site ! Nous espérons que nous vous aidons amplement !<br/>
+              Abonnez vous donc pour être les premiers à recevoir toutes les actualités du site web.
+            </p>
+            <form action="backend/abonnement.php" method="post">
+              <input type="text" name="logMail" placeholder="Votre mail" class="form-control" required="required" autofocus="autofocus">
+              <input type="submit" name="logTrue" class="btn" value="M'abonner" style="background-color: grey; color: white;">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="texte container">
+      La Programmation web est tellement géniale ! J'en suis moi même un grand fan <span class="fa fa-smile-o"></span>.<br/>
+      Il m'a fallu du temps pour comprendre la beauté du web ! Aujourd'hui je peux créer de vrais sites web ! Et oui ! Aujourd'hui je peux, et bientôt vous aussi.<br/>
+      Les technologies web sont nombreuses, vous qui croyez que le simple HTML et CSS que vous connaissez est très facile, laissez moi vous ramenez à la réalité: <em>La complexité de ces deux technologies est telle que l'on puisse littéralement  réalisé <b>des jeux web</b>, des <b>systèmes de Géolocalisation</b> et pleines d'autres choses encore</em>.<br/>
+      J'avoue tout de même qu'il faudra connaître d'autres technologies comme <b>Canvas</b>, <b>WebGL</b>, bref pour des projets de plus en plus gros vous aurez besoin de technologies avancées introduitent avec HTML5. Trève de bavardage, on se retrouve au bout du chemin de <b>développeur Fullstack</b><br/>
+      <em>Ne me dites pas que vous ignorez ce qu'est un développeur Fullstack ? Bon c'est pas grave ! On traitera ces notions qui vous sont étrangères, mais commençons d'abord</em>
+      <div style="text-align: center;">
+        <a href="#html" class="btn" style="border-radius: 100% 100% 100% 100%; background-color: black; color: white;">
+          <span class="fa fa-arrow-down"></span>
+        </a>
+      </div>   
+    </div>
+
+    <div class="diviseur"></div>
+
+    <section class="sous-titre cercle" style="background-color: #3333FF;">
+      Apprendre le HTML
+      <div class="sm-text">
+        Débutez les cours maintenant<br/>
+        <a href="view/html.html" class="btn" style="background-color: blue; color: white;">Commencez</a>
+      </div>
+    </section>
+    <div class="titre visible-xs visible-sm" style="background-image: url(images/image2.png);" id="html"></div>
+    
+    
+    <section class="sous-titre cercle" style="background-color: #00CC00;">
+      Apprendre le CSS
+      <div class="sm-text">
+        Début les cours maintenant<br/>
+        <a href="" class="btn" style="background-color: green; color: white;">Commencez</a>
+      </div>    
+    </section>
+    <div class="titre visible-xs visible-sm" style="background-image: url();" id="css"></div>
+    
+    
+    <section class="sous-titre cercle" style="background-color: #CC0000">
+      Se perfectionner
+        <div class="sm-text">
+          Début les cours maintenant<br/>
+          <a href="" class="btn" style="background-color: red; color: white;">Commencez</a>
+        </div>
+    </section>
+    <div class="titre visible-xs visible-sm" style="background-image: url();" id="perfection"></div>
+    
+    
+    <section class="sous-titre cercle" style="color: white; background-color: #FFCC00;">
+      Devenir Webmaster
+      <div class="sm-text">
+        Début les cours maintenant<br/>
+        <a href="" class="btn" style="background-color: orange; color: white;">Commencez</a>
+      </div>
+    </section>
+    <div class="titre visible-xs visible-sm" style="background-image: url();" id="webmaster"></div>
+    
+    <footer>
+      <section class="container">
+        <h1 style="text-align: center;">YouConnect</h1>
+        <div style="text-align: center;">
+          <a href="" class="btn">Qui sommes nous ?</a>
+          <a href="#formulaire" class="btn">Devenir membre</a>
+          <a href="mailto:ulrichekassi2001@gmail.com" class="btn">Contactez nous</a>
+        </div>
+          
+        <div id="formulaire">
+          <form method="post" action="../backend/new_member.php">
+            <fieldset>
+              <legend style="color: white;">Rejoignez nous</legend>
+              <input type="text" name="nom" class="form-control" placeholder="Nom" required="">
+              <input type="email" name="mail" class="form-control" placeholder="Email" required="">
+              <input type="tel" name="tel" placeholder="Téléphone" class="form-control" required="">
+
+              <input type="submit" name="submit" value="Soumettre" class="btn" style="background-color: black;">
+            </fieldset>
+            <a href="#debut" class="btn pull-right" style="background-color: grey; color: white; border-radius: 100% 100% 100% 100%;"><span class="fa fa-arrow-up"></span></a>
+          </form>
+        </div>        
+      </section>
+      <span>YouConnect 2020</span>
+    </footer>
+
+  </body>
+</html>
